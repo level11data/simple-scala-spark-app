@@ -5,12 +5,7 @@
 .*.sw?
 
 #IntelliJ Project User Specific Settings
-.idea/workspace.xml
-.idea/tasks.xml
-
-#IntelliJ Project Generated on Import (Maven)
-.idea/libraries/*.xml
-databricks-client.iml
+.idea/
 
 # Compiled class file
 *.class

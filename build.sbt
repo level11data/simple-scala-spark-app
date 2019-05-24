@@ -2,9 +2,9 @@ name := "simple-scala-spark-app"
 
 version := "0.0.1"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.11.12" //DBR 5.3
 
-sparkVersion := "2.2.1"
+sparkVersion := "2.4.0"
 
 sparkComponents ++= Seq("sql")
 

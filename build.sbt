@@ -16,5 +16,10 @@ assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeSca
 //assembly requires different JAR name config than package
 assemblyJarName in assembly := s"${name.value}_${scalaBinaryVersion.value}-${version.value}.jar"
 
+//prefix package names with "shaded."
+assemblyShadeRules in assembly := Seq(
+  ShadeRule.rename("com.typesafe.scalalogging.**" -> "shaded.com.typesafe.scalalogging.@1").inAll
+)
+
 fork in Test := true
 javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled")

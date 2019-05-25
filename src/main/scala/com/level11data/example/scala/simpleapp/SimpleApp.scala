@@ -1,11 +1,16 @@
 package com.level11data.example.scala.simpleapp
 
 import org.apache.spark.sql.SparkSession
+import com.typesafe.scalalogging.Logger
 
 object SimpleApp {
   def main(args: Array[String]) {
-    println("Arguments:")
 
+    val logger = Logger[this.type]
+
+    logger.info("Arguments: logging ")
+
+    println("Arguments:")
     var i = 0
     for(a <- args) {
       i = i+1
